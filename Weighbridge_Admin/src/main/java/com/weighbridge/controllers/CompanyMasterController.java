@@ -21,6 +21,7 @@ public class CompanyMasterController {
     public ResponseEntity<CompanyMasterDto> createCompany(@Validated @RequestBody CompanyMasterDto companyMasterDto){
         CompanyMasterDto savedCompany = companyMasterService.createCompany(companyMasterDto);
         return new ResponseEntity<>(savedCompany, HttpStatus.CREATED);
+       System.out.pintln("Hello world");
     }
 
     @GetMapping
